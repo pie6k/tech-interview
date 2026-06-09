@@ -32,7 +32,7 @@ export function App() {
         <ZodForm
           //
           schema={$signupSchema}
-          onSubmit={(data) => {
+          onSubmit={async (data) => {
             console.log(data);
           }}
         />
