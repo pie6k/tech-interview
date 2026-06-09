@@ -1,0 +1,13 @@
+node_modules
+dist
+*.local
+
+# Yarn (node-modules linker)
+.yarn/*
+!.yarn/patches
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+.yarn/install-state.gz
