@@ -18,5 +18,5 @@ export function SomeComponent() {
     [rendersCount]
   );
 
-  return <div>SomeComponent</div>;
+  return <div>SomeComponent {rendersCount}</div>;
 }
