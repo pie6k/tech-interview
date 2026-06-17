@@ -1,3 +1,9 @@
+/**
+ * Implement ObservableSize.
+ * - it should be a class that can be used to observe the size of an element
+ * with mobx observable values
+ */
+
 import { autorun } from "mobx";
 import { getRandomInt } from "./utils";
 
@@ -8,6 +14,8 @@ const observableSize = new ObservableSize(element);
 autorun(() => {
   console.log("Size", observableSize.width, observableSize.height);
 });
+
+// later observableSize.destroy();
 
 setInterval(() => {
   const randomWidth = getRandomInt(100, 1000);
