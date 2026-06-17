@@ -1,6 +1,4 @@
 import { createGlobalStyle, styled } from "styled-components";
-import { ZodForm } from "./ZodForm";
-import { $signupSchema } from "./schema";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -28,15 +26,7 @@ export function App() {
   return (
     <>
       <GlobalStyle />
-      <Page>
-        <ZodForm
-          //
-          schema={$signupSchema}
-          onSubmit={async (data) => {
-            console.log(data);
-          }}
-        />
-      </Page>
+      <Page>Hello World</Page>
     </>
   );
 }
