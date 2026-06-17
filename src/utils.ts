@@ -23,7 +23,7 @@ function createInterval(min: number, max: number, callback: () => void) {
   };
 }
 
-export function useRerenderInterval(min: number, max: number) {
+export function useRandomReRender(min: number, max: number) {
   const [renderCount, setRenderCount] = useState(0);
 
   useEffect(() => {

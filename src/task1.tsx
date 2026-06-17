@@ -1,7 +1,7 @@
-import { useRerenderInterval, wait } from "./utils";
+import { useRandomReRender, wait } from "./utils";
 
 export function SomeComponent() {
-  const renderCount = useRerenderInterval(100, 1000);
+  const rendersCount = useRandomReRender(100, 1000);
 
   useAsyncEffect(
     async ({ assertActive }) => {
@@ -9,9 +9,13 @@ export function SomeComponent() {
 
       assertActive();
 
-      console.log("Async effect finished");
+      console.log("Async effect finished", { rendersCount });
+
+      return () => {
+        console.log("Async effect cleanup", { rendersCount });
+      };
     },
-    [renderCount]
+    [rendersCount]
   );
 
   return <div>SomeComponent</div>;
